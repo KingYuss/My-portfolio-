@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yusuf Shuaib Olohandare | Portfolio</title>
+  <meta name="description" content="Portfolio of Yusuf Shuaib Olohandare – Accounting, Finance & Digital Marketing professional based in Lagos, Nigeria." />
+  <style>
+    :root {
+      --primary: #1a365d;
+      --accent: #2b6cb0;
+      --light-blue: #ebf8ff;
+      --dark: #2d3748;
+      --gray: #4a5568;
+      --light-gray: #f7fafc;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+    }
+
+    header .tagline {
+      font-size: 1.05rem;
+      color: #90cdf4;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    header .contact {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    header .contact span {
+      margin: 0 0.4rem;
+    }
+
+    /* Navigation */
+    nav {
+      background: var(--primary);
+      border-top: 1px solid rgba(255,255,255,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+      gap: 0.3rem 1.2rem;
+    }
+
+    nav a {
+      color: white;
+      font-size: 0.92rem;
+      font-weight: 500;
+      opacity: 0.9;
+      padding: 0.3rem 0;
+    }
+    nav a:hover {
+      opacity: 1;
+      text-decoration: none;
+      border-bottom: 2px solid #90cdf4;
+    }
+
+    /* Main content */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--dark);
+      font-size: 0.98rem;
+    }
+
+    /* About */
+    .about p {
+      text-align: justify;
+    }
+
+    /* Experience cards */
+    .role {
+      margin-bottom: 1.6rem;
+    }
+
+    .role h3 {
+      font-size: 1.08rem;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .role .meta {
+      font-size: 0.92rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .role ul {
+      padding-left: 1.3rem;
+      margin-top: 0.4rem;
+    }
+
+    .role li {
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+    }
+
+    .skill-tag {
+      background: var(--light-blue);
+      color: var(--primary);
+      border: 1px solid #bee3f8;
+      border-radius: 6px;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Strengths */
+    .strengths-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .strengths-list li {
+      margin-bottom: 0.85rem;
+      padding-left: 0;
+      font-size: 0.96rem;
+    }
+
+    .strengths-list strong {
+      color: var(--primary);
+    }
+
+    /* Career objective box */
+    .objective-box {
+      background: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      padding: 1.2rem 1.4rem;
+      border-radius: 0 6px 6px 0;
+      margin-top: 0.5rem;
+    }
+
+    .objective-box p {
+      margin-bottom: 0;
+    }
+
+    /* Languages & availability */
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-list li {
+      margin-bottom: 0.5rem;
+      font-size: 0.96rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .info-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Contact section */
+    .contact-section {
+      background: var(--light-gray);
+      border-radius: 8px;
+      padding: 1.6rem 1.5rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .contact-section h2 {
+      border-bottom: none;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-section p {
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-section a {
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      background: var(--light-gray);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+      header {
+        padding: 2.5rem 1rem 2rem;
+      }
+      nav ul {
+        gap: 0.2rem 0.9rem;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yusuf Shuaib Olohandare</h1>
+    <div class="tagline">Accounting  •  Finance  •  Digital Marketing</div>
+    <div class="contact">
+      Lagos, Nigeria
+      <span>•</span>
+      +234 902 869 7902
+      <span>•</span>
+      <a href="mailto:shubzylee@gmail.com" style="color:#90cdf4;">shubzylee@gmail.com</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#strengths">Strengths</a></li>
+      <li><a href="#objective">Objective</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I am a motivated and detail-oriented graduate of Marketing from the University of Ilorin with practical experience in accounting and financial operations gained during my National Youth Service Corps (NYSC) placement.
+      </p>
+      <p>
+        At Hakunamatata and Son, a microfinance institution, I served as an Account Officer where I handled cash reconciliation, financial record keeping, transaction documentation, and customer account support. This combination of formal marketing education and hands-on accounting experience allows me to approach business challenges with both analytical precision and customer-focused thinking.
+      </p>
+      <p>
+        I am eager to build a career in accounting, finance, or related administrative roles where accuracy, integrity, and continuous learning are valued.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="role">
+        <h3>Account Officer (NYSC)</h3>
+        <div class="meta">Hakunamatata and Son  •  Microfinance Institution  •  2026</div>
+        <p>
+          During my national service year, I worked in an accounting and operations capacity within a microfinance setting. My responsibilities focused on maintaining the integrity of financial records and supporting day-to-day financial processes.
+        </p>
+        <ul>
+          <li>Maintained accurate financial records and ensured proper documentation of transactions.</li>
+          <li>Performed regular cash reconciliation to confirm accuracy and consistency of records.</li>
+          <li>Prepared daily and periodic operational and financial reports for internal use.</li>
+          <li>Monitored financial transactions and supported account-related activities.</li>
+          <li>Assisted with financial documentation, record management, and administrative support.</li>
+          <li>Handled customer enquiries related to accounts and supported customer service processes.</li>
+          <li>Worked collaboratively with colleagues to ensure smooth financial operations and reporting.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Digital Marketing Support</h3>
+        <div class="meta">Hakunamatata and Son  •  2026</div>
+        <ul>
+          <li>Applied marketing knowledge to support the organisation’s visibility and customer engagement efforts.</li>
+          <li>Used customer-focused communication principles in day-to-day interactions.</li>
+          <li>Gained practical exposure to how digital channels support business operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="role">
+        <h3>Bachelor of Science (B.Sc.) in Marketing</h3>
+        <div class="meta">University of Ilorin, Nigeria  •  2025</div>
+        <p>
+          Completed a comprehensive marketing degree covering consumer behaviour, marketing strategy, digital marketing principles, and business communication. This academic foundation complements my practical accounting experience and strengthens my ability to communicate effectively and understand business from both a financial and market perspective.
+        </p>
+      </div>
+
+      <div class="role">
+        <h3>National Youth Service Corps (NYSC)</h3>
+        <div class="meta">Nigeria  •  2026</div>
+        <p>
+          Successfully completed national service with focused workplace experience in accounting, financial operations, and customer service within a microfinance environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-tag">Cash Reconciliation</div>
+        <div class="skill-tag">Financial Record Keeping</div>
+        <div class="skill-tag">Bookkeeping Support</div>
+        <div class="skill-tag">Financial Reporting</div>
+        <div class="skill-tag">Transaction Documentation</div>
+        <div class="skill-tag">Microsoft Excel</div>
+        <div class="skill-tag">Microsoft Word</div>
+        <div class="skill-tag">Data Entry</div>
+        <div class="skill-tag">Customer Account Management</div>
+        <div class="skill-tag">Digital Marketing</div>
+        <div class="skill-tag">Customer Service</div>
+        <div class="skill-tag">Report Preparation</div>
+      </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section id="strengths">
+      <h2>Key Strengths</h2>
+      <ul class="strengths-list">
+        <li><strong>Numerical Accuracy</strong> — Strong focus on precision when handling figures, reconciliations, and financial records.</li>
+        <li><strong>Organised Documentation</strong> — Consistent maintenance of clear, complete, and well-structured financial and operational records.</li>
+        <li><strong>Customer Orientation</strong> — Ability to respond to customer enquiries professionally while supporting account-related processes.</li>
+        <li><strong>Reliability & Integrity</strong> — Trusted with sensitive financial information and committed to accurate reporting.</li>
+        <li><strong>Adaptability</strong> — Quick to learn workplace systems and comfortable supporting both accounting and marketing-related tasks.</li>
+        <li><strong>Team Collaboration</strong> — Works effectively with colleagues to maintain efficient operations and timely reporting.</li>
+      </ul>
+    </section>
+
+    <!-- OBJECTIVE -->
+    <section id="objective">
+      <h2>Career Objective</h2>
+      <div class="objective-box">
+        <p>
+          I am seeking entry-level to junior roles in accounting, finance, microfinance, banking support, or administrative positions where I can apply my practical experience in cash reconciliation, record keeping, and financial reporting. I am particularly interested in organisations that value accuracy, professional integrity, and a willingness to grow. My Marketing background further enables me to communicate clearly and understand customer needs — skills that strengthen performance in client-facing and internal support roles. I am open to opportunities in Nigeria and internationally.
+        </p>
+      </div>
+    </section>
+
+    <!-- LANGUAGES & AVAILABILITY -->
+    <section id="availability">
+      <h2>Languages & Availability</h2>
+      <ul class="info-list">
+        <li><strong>Languages:</strong> English (Fluent) | Yoruba (Fluent)</li>
+        <li>Available for full-time employment and ready to relocate if required.</li>
+        <li>Comfortable working in structured office environments and supporting cross-functional teams.</li>
+        <li>Eager to develop further expertise in accounting software and modern financial systems.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <h2>Get In Touch</h2>
+      <p>Thank you for reviewing my portfolio. I look forward to the opportunity to contribute to your organisation.</p>
+      <p style="margin-top: 1rem;">
+        <strong>Email:</strong> <a href="mailto:shubzylee@gmail.com">shubzylee@gmail.com</a><br />
+        <strong>Phone:</strong> +234 902 869 7902<br />
+        <strong>Location:</strong> Lagos, Nigeria
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">
+        References available upon request.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Yusuf Shuaib Olohandare &nbsp;•&nbsp; Accounting • Finance • Digital Marketing
+  </footer>
+
+</body>
+</html>
